@@ -1,0 +1,460 @@
+* {
+  margin:          0;
+  padding:         0;
+  box-sizing:      border-box;
+  text-decoration: none;
+  border:          0;
+  font-family:     'Roboto', sans-serif;
+  font-weight:     500;
+}
+
+.my__input,
+.ivu-input {
+  border:         none;
+  border-bottom:  solid 1px;
+  font-size:      20px;
+  font-weight:    500;
+  padding-bottom: 8px;
+  color:          #013c61;
+  width:         100% !important;
+  padding-right: 20px;
+}
+
+.my__input,
+.my__input:hover,
+.my__input:focus,
+.ivu-input,
+.ivu-input:hover,
+.ivu-input:focus {
+  border-color: #e6e7eb;
+  outline:      none;
+  box-shadow:   none;
+  background:   transparent;
+}
+
+.carousel__content {
+  position: relative;
+  height: 100vh;
+  .note {
+    text-align: center;
+    position:   absolute;
+    bottom:     45px;
+    transform:  translate(-50%, -100%);
+    left:       50%;
+    color:      white;
+    font-size:  24px;
+
+    .carousel__title {
+      font-size: 24px;
+    }
+  }
+}
+
+.ivu-carousel {
+  max-height: 100vh;
+}
+
+.ivu-carousel-dots-inside {
+  bottom: 45px;
+}
+
+.ivu-layout {
+  min-height: 100vh;
+
+  .image__holder {
+    height:   100vh;
+    overflow: hidden;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+    img {
+      height:     100%;
+      width:      100%;
+      object-fit: cover;
+    }
+  }
+
+  .auth__holder {
+    height: 100vh;
+    @media (max-width: 1024px) {
+      width: 100% !important;
+    }
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+
+    .auth__main {
+      height:          78%;
+      width:           100%;
+      display:         flex;
+      align-items:     flex-end;
+      justify-content: center;
+
+      .auth__content {
+        width: 70%;
+      }
+    }
+
+    .text__data {
+      height:      22%;
+      width:       100%;
+      display:     flex;
+      align-items: flex-end;
+
+      .text__content {
+        display:         flex;
+        width:           100%;
+        justify-content: space-between;
+        padding:         30px;
+
+        @media (max-width: 767px) {
+          flex-direction: column;
+        }
+        .text {
+          font-size:   13px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.auth__title {
+  font-size: 34px;
+
+  @media (max-width: 565px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  font-size:   18px;
+  font-weight: 400;
+  @media (max-width: 565px) {
+    font-size: 14px;
+  }
+}
+
+label {
+  font-size:   16px;
+  font-weight: 400;
+  color:       #6a7e8a;
+}
+
+.-color-success {
+  color: #2bda53;
+}
+
+.my__card {
+  padding:    35px;
+  box-shadow: 0 20px 50px #eaeee9;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.ivu-input-wrapper:not(.search__input) {
+  width:         100% !important;
+  padding-right: 20px;
+}
+
+.pos\@rel {
+  position: relative;
+}
+
+.form__control {
+  position: relative;
+
+  .my__input + img {
+    position: absolute;
+    height:   60%;
+    right:    0;
+  }
+
+  .my__input ~ .my__icon {
+    position:  absolute;
+    font-size: 35px;
+    right:     0;
+  }
+}
+
+.flex {
+  display:   flex;
+  flex-wrap: wrap;
+}
+
+.just__right {
+  justify-content: flex-end;
+}
+
+.my__button {
+  background: #2bda53;
+  border:     none;
+  padding:    5px 50px;
+  font-size:  18px;
+  color:      white !important;
+}
+
+button:focus,
+.my__button:focus {
+  border:  0;
+  outline: 0;
+}
+
+.ivu-carousel-dots li {
+  padding:         0;
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  height:          17px;
+  width:           17px;
+
+  button {
+    background: #d0e8df !important;
+  }
+}
+
+.ivu-carousel-active {
+  border:        solid 1px #d0e8df;
+  border-radius: 50%;
+
+  button.radius {
+    background: #2bda53 !important;
+  }
+}
+
+.ivu-carousel-dots li button.radius {
+  height: 10px !important;
+  width:  10px !important;
+}
+
+.ivu-menu-light.ivu-menu-vertical
+.ivu-menu-item-active:not(.ivu-menu-submenu)::after {
+  content:    '';
+  display:    block;
+  width:      5px;
+  position:   absolute;
+  top:        0;
+  bottom:     0;
+  left:      0;
+  background: #2BDA53;
+}
+
+.ivu-menu-vertical .ivu-menu-item, .ivu-menu-vertical .ivu-menu-submenu-title{
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ivu-layout-sider{
+  background: #fff;
+}
+
+.ivu-menu-vertical{
+  display: flex;
+  flex-wrap: wrap;
+  height: calc((35%) + (100px));
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 100px;
+  li{
+    width: 100%;
+  }
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+  background: transparent;
+}
+
+.ivu-layout-header {
+  display:     flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+.layout-logo {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.ivu-avatar-large {
+  margin-right: 10px;
+  background: #6A7E8A;
+}
+
+.avatar__name {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.emp__title {
+  font-size: 26px;
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+.emp__title2 {
+  font-size: 36px;
+  @media (max-width: 767px) {
+    font-size: 26px;
+  }
+}
+
+.employees__layout {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.employees__card {
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+}
+
+.my__button2 {
+  background: #2bda53;
+  border:     none;
+  padding:    4.2px 50px;
+  font-size:  14px;
+  color:      white !important;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+
+.d-inline{
+  display: inline-block;
+}
+
+.search__input .ivu-input {
+  border: solid 1px rgba(106, 126, 138, 0.4);
+  font-size:      20px;
+  font-weight:    500;
+  color:          #013c61;
+  width:          auto !important;
+  padding-right:  20px;
+  vertical-align: middle;
+  padding-bottom: 4px;
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+.emp__paginator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div{
+    margin-right: 5px;
+  }
+}
+
+.ivu-btn-small {
+  font-size: 30px;
+  background: transparent !important;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.employees__table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ivu-table {
+  font-size: 16px;
+  background: transparent;
+}
+
+.ivu-table-border td, .ivu-table-border th {
+  border-right: none;
+  background: transparent;
+}
+
+
+.ivu-table-wrapper {
+  border:        none;
+  border-bottom: 0;
+  border-right:  0;
+  min-width:     1000px;
+}
+.ivu-table::after {
+  background-color: transparent;
+}
+
+.ivu-table th {
+  border-bottom: 10px solid #f5f7f9;
+  background: transparent;
+}
+
+.ivu-table td {
+  min-width:      0;
+  height:         48px;
+  box-sizing:     border-box;
+  text-align:     left;
+  text-overflow:  ellipsis;
+  vertical-align: middle;
+  border-bottom:  10px solid #f5f7f9;
+  background: #fff;
+}
+
+.ivu-table::before {
+  background-color: transparent;
+}
+
+.add__employees {
+  padding: 40px;
+  background: #fff;
+}
+
+.ivu-layout.ivu-layout-has-sider > .ivu-layout, .ivu-layout.ivu-layout-has-sider > .ivu-layout-content {
+  overflow-x: hidden;
+  height: calc((100vh) - (64px));
+  overflow-y: auto;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .ivu-col-span-12 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .my__card {
+    text-align: left;
+  }
+}
