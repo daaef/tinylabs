@@ -13,6 +13,9 @@ export default {
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
    */
+  generate: {
+    fallback: true,
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -66,6 +69,29 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
   ],
+  manifest: {
+    name: 'Tinylabs Test',
+    short_name: 'Nuxt.js PWA',
+    lang: 'en',
+    display: 'standalone',
+  },
+
+  workbox: {
+    runtimeCaching: [
+      {
+        urlPattern: 'https://fonts.googleapis.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } },
+      },
+      {
+        urlPattern: 'https://fonts.gstatic.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } },
+      },
+    ],
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
